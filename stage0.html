@@ -1,0 +1,324 @@
+<!-- The notes in this document are from the following webpage: 
+https://www.udacity.com/wiki/cs253/unit-1 -->
+
+<h1 id="notes-stage-0">Notes Stage 0</h1>
+<li>
+  <strong>the web</strong>
+   - what it is, what it looks like and how the pieces fit together
+</li>
+<li>
+ 	<strong>HTML</strong>
+ 	- the main document type of the web
+</li>
+<li>
+ 	<strong>URLs</strong>
+ 	-how you refer to documents on the web
+</li>
+<li>
+ 	<strong>HTTP</strong>
+ 	- the protocol that the web runs on
+</li>
+<li>
+ 	<strong>Web Applications</strong>
+ 	- what they are and how they fit into the big picture
+</li>
+<h3 id="world-wide-web">World Wide Web</h3>
+<p>
+ 	The <strong>world wide web</strong> 
+ 	is a collection of HTML documents. 
+ 	<strong>HTML</strong> 
+ 	stands for 
+ 	<a href="/wiki/HyperText">HyperText</a> 
+ 	Markup Language and it is the basis for almost every web page - it is what glues everything together.
+</p>
+<p>
+	The links between pages are called 
+	<strong>hyper links</strong>, 
+	or just links, and give the internet its web-like characteristic.
+</p>
+<p>
+	The web was invented in the early 1990s and has somewhere around 30 billion pages!
+</p>
+<li>
+		<strong>HTTP</strong> - the main protocol of the web
+</li>
+<li>
+		<strong>Servers</strong> - computers that host the files that makes up the web
+</li>
+<li>
+		<strong>Internet</strong> - the world's largest computer network
+</li>
+<li>
+		<strong>Browser</strong> - a program that runs on your computer to display files found on the web
+</li>
+<p>
+	HTML, or 
+	<a href="/wiki/HyperText">HyperText</a> 
+	Markup Language is the heart of the web. It is made up of:
+</p>
+<ol>
+	<li>
+		text content, which is what you see
+	</li>
+	<li>
+		markup, which is what the content looks like
+	</li>
+	<li>
+		references to other documents, for example, images and videos
+	</li>
+	<li>
+		links to other pages
+	</li>
+</ol>
+<p>
+	HTML markup is made up of things called "tags". Tags look something like this:
+</p>
+<ul>
+	<li>
+		<code>&lt;NAME&gt; Contents &lt/NAME&gt;</code>
+	</li>
+</ul>
+<p>
+	The contents can include other tags, or it may just be text. The 
+	<code>	&lt;NAME&gt;</code> 
+	tag is called the "
+	<strong>opening tag</strong>
+	" and the 
+	<code>&lt;/NAME&gt;</code> 
+	tag is called the "
+	<strong>closing tag</strong>
+</p>
+<p>
+	The whole construct: 
+	<code>&lt;NAME&gt; Contents &lt;/NAME&gt;</code> 
+	can also be referred to as "
+	<strong>an element</strong>
+	".
+</p>
+<h3 id="the-bold-tag">The Bold Tag</h3>
+<p>
+	"makes things bold"
+</p>
+<ul>
+	<li>
+		<code>&lt;b&gt;Contents&lt;/b&gt;</code>
+	</li>
+</ul>
+<h3 id="the-emphasis-tag">The Emphasis Tag</h3>
+<p>
+	"makes things italic"
+</p>
+<ul>
+	<li>
+		<code>&lt;em&gt;contents&lt;/em&gt;</code>
+	</li>
+</ul>
+<h3 id="HTML attributes">HTML attributes</h3>
+<ul>
+	<li>
+		<code>&lt;TAG ATTR="value"&gt;Contents&lt;/TAG&gt;</code>
+	</li>
+</ul>
+<p>
+	Attributes have a name (in the example above it is simply called 
+	<strong>ATTR</strong>
+	) and a value (inside the quotes). Tags may have multiple attributes.
+</p>
+<p>
+	An example of a tag that uses attributes is the <strong>anchor tag
+	</strong> <code>&lt;a&gt;</code>
+	, and a full example would look something like this:
+</p>
+<ul>
+	<li>
+		<code>&lt;a href="http://www.reddit.com"&gt;derp&lt;/a&gt;</code>
+	</li>
+</ul>
+<p>
+	Here, within the opening tag we have the opening a and an attribute called 
+	<strong>href</strong>, 
+  the value of the attribute which is a URL in this case. If this were rendered in a browser we would just see the word "derp", but it would be a link to reddit.com.
+</p>
+<h3 id="the-image-tag">The Image Tag</h3>
+<ul>
+	<li>
+		<code>&lt;img src="URL" alt="text"&gt;</code>
+	</li>
+</ul>
+<p>
+	The image tag has an attribute named 
+	<strong>src</strong> 
+	(for "source") which equals the URL which is the location of the image file to be downloaded. This is followed by a second attribute called 
+	<strong>alt</strong>
+	. This stands for "alternate" and is the text that is to be displayed when the image doesn't load.
+</p>
+<p>
+	Image tags don't have a closing tag. There is no contents to an image tag, and so the closing tag is not required.
+</p>
+<p>
+	Tags, like 
+	<code>&lt;img&gt;</code>
+	, that don't require a closing tag are called 
+	<strong>void tags</strong>
+	.
+</p>
+<h3 id="the-break-tag">The Break Tag</h3>
+<ul>
+	<li>
+		<code>&lt;br&gt;</code>
+	</li>
+</ul>
+<p>
+	It is also a void tag.
+</p>
+<p>
+	The effect of 
+	<code>&lt;br&gt;</code> 
+	is to cause the browser to move to a new line before displaying the next piece of content. 
+</p>
+<h3 id="the-paragraph tag">The Paragraph Tag</h3>
+<ul>
+	<li>
+		<code>&lt;p&gt;Content&lt;/p&gt;</code>
+	</li>
+</ul>
+<p>
+	It's another way of creating line-breaks. The paragraph tag is 
+	<strong>NOT</strong> 
+	a void tag. Paragraph tags have content.
+</p>
+<p>
+	The content between the opening and closing tags will be rendered by the browser as a single paragraph.
+</p>
+<h3 id="inline-vs-block">Inline vs. Block</h3>
+<p>
+	The 
+	<code>&lt;br&gt;</code> 
+	tag is what we call an 
+	<strong>INLINE</strong> 
+	tag and the 
+	<code>&lt;p&gt;</code> 
+	tag is what we call a 
+	<strong>BLOCK</strong> 
+	tag.
+</p>
+<p>
+	What the 
+	<code>&lt;br&gt;</code> 
+	tag was actually doing is telling the browser to end the line.
+</p>
+<p>
+	The 
+	<code>&lt;p&gt;</code> 
+	tag acts differently. What the 
+	<code>&lt;p&gt;</code> 
+	tag does is to create an invisible "box". So the HTML code:
+</p>
+<h3 id="span-and-div">Span and Div</h3>
+<ul>
+	<li>
+		<code>&lt;span&gt;Content&lt;/span&gt;</code>
+	</li>
+	<li>
+		<code>&lt;div&gt;Content&lt;/div&gt;</code>
+	</li>
+</ul>
+<p>
+	The only difference between these elements is that span is an inline element whereas div is a block element. The only function of these elements is to contain their content and there is a way of attaching styles to them to change the way in which their contents display. This is done by attaching attributes to the tags so they look something like this:
+</p>
+<ul>
+	<li>
+		<code>&lt;span class="foo"&gt;Content&lt;/span&gt;</code>
+	</li>
+	<li>
+		<code>&lt;div class="bar"&gt;Content&lt;/div&gt;</code>
+	</li>
+</ul>
+<p>
+	The class attribute refers to a 
+	<strong>CSS class</strong>
+	. CSS classes are not something that we are going to spend a lot of time on in this course, as we will provide the CSS where needed. CSS is a separate language for adding styles to your documents.
+</p>
+<p>
+  <b>
+    Inline Elements
+  </b>
+	<ul>
+		<li>a</li>
+		<li>span</li>
+		<li>br</li>
+		<li>img</li>
+		<li>strong</li>
+	</ul>
+    <b>
+      Block Elements
+    </b>
+	<ul>
+		<li>div</li>
+		<li>p</li>
+		<li>form</li>
+	</ul>
+</p>
+<h3 id="document-structure">Document Structure</h3>
+<p>
+	<code>&lt;!DOCTYPE HTML&gt;</code>
+</p>
+<p>
+	<code>&lt;html&gt;</code>
+</p>
+<p>
+	<code>&lt;head&gt;</code>
+</p>
+<p>
+	<code>- &lt;title&gt;Title!&lt;/title&gt;</code>
+</p>
+<p>
+	<code>&lt;/head&gt;</code>
+</p>
+<p>
+	<code>&lt;body&gt;</code>
+</p>
+<p>
+	<code>- &lt;b&gt;Content&lt;/b&gt;</code>
+</p>
+<p>
+	<code>&lt;/body&gt;</code>
+</p>
+<p>
+	<code>&lt;/html&gt;</code>
+</p>
+<b>Explanations</b>
+<p>
+	<code>&lt;!DOCTYPE HTML&gt;</code>
+	specifies the doctype. i.e. what kind of HTML this is. The "HTML" string within this tag used to be a 
+	<em>LOT</em> 
+	more complicated, but now that we are using HTML5 we have a nice clean, simple doctype.
+</p>
+<p>
+	The 
+	<code>&lt;html&gt;</code> 
+	and 
+	<code>&lt;/html&gt;</code> 
+	tags surround the rest of the document providing a kind of "container" for the document.
+</p>
+<p>
+	The 
+	<code>&lt;head&gt;</code> 
+	and 
+	<code>&lt;/head&gt;</code> 
+	tags enclose the document header. This part of the document contains metadata about the document and other document information. 
+	<a href="/wiki/JavaScript">JavaScript</a> 
+	and CSS would also be included in the document header.
+</p>
+<p>
+	The 
+	<code>&lt;title&gt;</code> 
+	element contains the title of the page. This is what will appear at the top of your browser, and in the browser tab, when you open the document.
+</p>
+<p>
+	Next, we have the 
+	<code>&lt;body&gt;</code> 
+	and 
+	<code>&lt;/body&gt;</code> 
+	tags that enclose the actual contents of the document. So far, we have been looking at elements that would be included in the body of the document. In fact, most of this course will be concerned with generating the content that fits between the body tags. The rest of the HTML that makes up the document is important, and you will see it, and we'll be sending it over the wire, but it doesn't change very often and it is pretty simple. All of the interesting stuff happens between the body tags.
+</p>
